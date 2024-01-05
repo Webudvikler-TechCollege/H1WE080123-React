@@ -11,7 +11,9 @@ export const Main = () => {
 			<PageTitle 
 				pagetitle="Velkommen til min side - nu med en sidetitel styret af props" >			
 			</PageTitle>
-			<List data={arrItems}></List>
+			<List data={arrItems}>
+				
+			</List>
 		</main>
 	)
 }

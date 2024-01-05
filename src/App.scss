@@ -1,3 +1,10 @@
-div {
-  border: solid 1px #000
+@use './assets/scss/mixins';
+
+body{
+  margin: 0;
+  padding: 0;
+}
+ 
+* {
+  @include mixins.border
 }

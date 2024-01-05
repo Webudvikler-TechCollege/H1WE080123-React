@@ -1,9 +1,9 @@
-export const List = props => {
-	console.log(props.data);
+/* eslint-disable react/prop-types */
+export const List = ({data}) => {
 
 	return (
 		<ul>
-			{props.data.map((item, key) => {
+			{data.map((item, key) => {
 				return (
 					<li key={key}>{item}</li>
 				)
