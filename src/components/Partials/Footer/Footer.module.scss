@@ -1,0 +1,8 @@
+@use '../../../Assets/scss/vars';
+@use '../../../Assets/scss/mixins';
+
+.footer {
+	@include mixins.globalPadding;
+	background-color: vars.$primaryColor;
+	color: vars.$secondaryColor
+}

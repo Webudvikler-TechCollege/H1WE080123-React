@@ -1,4 +1,4 @@
-import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
+import { ContentWrapper } from "../../Components/ContentWrapper/ContentWrapper";
 
 export const About = () => {
 	return (

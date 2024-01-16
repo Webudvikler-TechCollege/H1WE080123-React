@@ -1,0 +1,76 @@
+@use "../../../Assets/scss/mixins";
+@use "../../../Assets/scss/vars";
+
+.navbar {
+  display: flex;
+  justify-content: start;
+  margin-top: 10px;
+
+  ul {
+    @include mixins.clearList;
+
+    > li {
+      display: inline-block;
+      
+      li {
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        flex: 1;
+      }
+
+      &:hover > a {
+        background-color: vars.$secondaryColor;
+        color: vars.$primaryColor;
+      }      
+
+      &:last-child > a {
+        border-right: 1px vars.$secondaryColor solid;
+      }
+
+      > a {
+        text-decoration: none;
+        border-left: 1px vars.$secondaryColor solid;
+        color: vars.$secondaryColor;
+        font-size: 1rem;
+        transition: color 0.3s ease;
+        padding: 0.5rem;
+      }
+
+      > ul {
+        display: none;
+        margin-top: 0.5rem;
+        margin-left: 0.5rem;
+        width: 200px;
+        position: absolute;
+        background-color: darkcyan;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.5);
+
+        li {
+          text-align: left;
+          border: 0 none;
+
+          &:last-child > a {
+            border-right: 0px none;
+          }
+
+        }
+      }
+      
+      &:hover ul {
+        display: block;
+      }
+    }
+  }
+
+}
+
+:global .active {
+  background-color: vars.$secondaryColor;
+  color: vars.$primaryColor !important;
+
+}
+
+

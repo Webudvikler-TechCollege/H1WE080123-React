@@ -1,6 +1,23 @@
 @use './assets/scss/mixins';
+@use './assets/scss/vars';
 
-body{
-  margin: 0;
-  padding: 0;
+body {
+  @include mixins.reset;
+  font-family: 'Verdana';
 }
+
+#root {
+  @include mixins.container;
+  display: grid;
+  grid-template-rows: max-content auto max-content;
+	border-left: solid 1px darkolivegreen;
+	border-right: solid 1px darkolivegreen;
+  min-height: 100vh;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+
+}
+
+header h1 {
+  color: #fff !important;
+}
+

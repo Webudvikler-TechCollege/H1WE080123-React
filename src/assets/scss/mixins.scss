@@ -1,3 +1,5 @@
+@use './vars';
+
 @mixin reset {
     margin: 0px;
     padding: 0px;
@@ -11,13 +13,17 @@
   
   @mixin container {
     width: 100%;
-    max-width: $container_width;
+    max-width: vars.$containerWidth;
     margin: 0 auto;
   }
   
-  @mixin container-full {
+  @mixin containerFull {
     width: 100%;
     margin: 0 auto;
+  }
+
+  @mixin globalPadding {
+    padding: 0.8rem 1.5rem;
   }
   
   @mixin flex {
@@ -36,21 +42,33 @@
     white-space: pre-wrap;
   }
   
-  @mixin image-cover($max-width, $height, $bg-size) {
+  @mixin imageCover($maxWidth, $height, $bgSize) {
     width: 100%;
-    max-width: $max-width;
+    max-width: $maxWidth;
     height: $height;            
-    background-size: $bg-size;
+    background-size: $bgSize;
     background-repeat: no-repeat;
     background-position: center;            
   }
   
-  @mixin image-full-width {
+  @mixin imageFullWidth {
     width: 100%;
   }
 
-  @mixin clear-list {
+  @mixin clearList {
     list-style-type: none;
     @include reset;
+  }
+
+  @mixin modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.7);
   }
   

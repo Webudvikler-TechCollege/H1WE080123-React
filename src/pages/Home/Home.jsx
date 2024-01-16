@@ -1,4 +1,4 @@
-import { ContentWrapper } from "../../components/ContentWrapper/ContentWrapper";
+import { ContentWrapper } from "../../Components/ContentWrapper/ContentWrapper";
 
 export const Home = () => {
 	console.log(1234)
