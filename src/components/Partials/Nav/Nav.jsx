@@ -16,13 +16,9 @@ export const Nav = () => {
 					</ul>				
 				</li>
 
-				<li><NavLink to="/greetings">useState Hooks</NavLink>
-					<ul>
-						<li><NavLink to="/greetings">Greeting</NavLink></li>
-						<li><NavLink to="/counter">Counter</NavLink></li>
-						<li><NavLink to="/todolist">ToDo List</NavLink></li>
-					</ul>
-				</li>
+				<li><NavLink to="/effects">Effects</NavLink></li>
+				<li><NavLink to="/fetchdata">Fetch Data</NavLink></li>
+
 			</ul>
 		</nav>
 	)

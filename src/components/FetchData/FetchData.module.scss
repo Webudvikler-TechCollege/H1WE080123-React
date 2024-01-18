@@ -1,0 +1,12 @@
+@use '../../Assets/scss/mixins';
+
+.goalslist {
+	@include mixins.clearList;
+	display: grid;
+	grid-gap: 1rem;
+	grid-template-columns: 2fr 2fr 2fr;
+
+	img {
+		width: 100%;
+	}
+}
